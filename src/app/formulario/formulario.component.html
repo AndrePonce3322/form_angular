@@ -49,4 +49,11 @@
             <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid">Enviar</button>
         </div>
     </div>
+
+    <div *ngIf="mostrardata" class="alert alert-success">
+        <p>Datos enviado correctamente!</p>
+        <pre>Formularios enviados: {{datosAlmacenados.length}}</pre>
+        <pre>{{datosAlmacenados | json}}</pre>
+    </div>
 </form>
+

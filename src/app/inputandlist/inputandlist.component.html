@@ -5,6 +5,8 @@
         <input type="text" class="form-control" style="width: 300px;" [(ngModel)]="cityAgregada" (keyup.enter)="enviarCiudad(cityAgregada)">
         <button class="btn btn-info" (click)="enviarCiudad(cityAgregada) ">Add city</button>    
     </div>
+    <hr>
+    <label for="buscador">Filtrar contenido de la lista</label>
     <input type="text" class="form-control" style="width: 300px;" placeholder="Buscador 🔍" [(ngModel)]="criterio">
 
     <hr>
@@ -12,7 +14,7 @@
         <li *ngFor="let cadaCity of (ciudades | detectarbusqueda: criterio)" (click)="seleccion(cadaCity)" [ngClass]="{'input-bonito': cadaCity==liSeleccionado}" >{{cadaCity | titlecase}}</li>
     </ul>
     <!-- Limpiar --> 
-    <button *ngIf="liSeleccionado" (click)="Clear()" class="btn btn-light">Retirarw seleccion</button>
+    <button *ngIf="liSeleccionado" (click)="Clear()" class="btn btn-light">Retirar seleccion</button>
     <!-- Enviar -->
     <button *ngIf="liSeleccionado" (click)="AlertSelection()" class="btn btn-light">Enviar</button>
 </div>

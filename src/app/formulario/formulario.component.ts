@@ -22,10 +22,25 @@ export class FormularioComponent implements OnInit {
     console.clear();
   }
 
+  datosAlmacenados: string[] = [];
+  mostrardata = false;
 
   FormValue(value: any){
     console.log(value);
-    alert("Datos enviado correctamente");4
+
+    this.datosAlmacenados.push(value);
+    this.mostrardata = true;
+
+    this.model.nombres = '';
+    this.model.apellidos = '';
+    this.model.ciudad = '';
+    this.model.requisitoEdad = false;
+    this.model.correo = '';
+    this.model.comentario = '';
+
+    
+
+
   }
 
 }
