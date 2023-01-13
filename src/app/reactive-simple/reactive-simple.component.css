@@ -1,0 +1,20 @@
+.alerta{
+    background: rgb(185, 23, 23);
+    width: 30%;
+    padding: 10px;
+    margin-top: 3px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bs-primary);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+button:active{
+    background: var(--bs-info);
+}

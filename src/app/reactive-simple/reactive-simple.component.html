@@ -1,0 +1,14 @@
+<form (ngSubmit)="enviandoDatos()" [formGroup]="datosBasicos">
+   
+        <label for="name">Ingresa tu nombre</label>
+        <input type="text" name="name" formControlName="name" required><br>
+        <div *ngIf=" datosBasicos.get('name')?.touched && datosBasicos.get('name')?.errors?.['required'] " class="alerta">Escribir tu nombre es necesario</div>        
+
+        <label for="ciudad">Ciudades</label>
+        <select name="ciudad form-select" formControlName="ciudad" required>
+            <option value="tegus">tegus</option>
+        </select>
+
+        <br> 
+        <button type="submit">Enviar</button>
+</form>

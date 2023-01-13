@@ -16,6 +16,7 @@ import { ContactReactiveComponent } from './contact-reactive/contact-reactive.co
 // Formularios
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveSimpleComponent } from './reactive-simple/reactive-simple.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormularioComponent,
     FormSimpleComponent,
     ContactReactiveComponent,
+    ReactiveSimpleComponent,
   ],
   imports: [
     BrowserModule,
